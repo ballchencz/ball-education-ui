@@ -1,0 +1,28 @@
+[
+  {
+    "title":"组件方式开发 Web App全站",
+    "courseIntro":"用HTML5/CSS3/JS流行技术，以组件式开发WebApp全站。",
+    "price":"￥78.00",
+    "person":"1239"
+  },{
+    "title":"Yii2.0全力出击打造完整电商平台",
+    "courseIntro":"完整电商业务流程详解、企业级实战开发环境，购物、下单、支付、收货......各功能模块逐一开发，打造一个京东模式电商平台",
+    "price":"￥268.00",
+    "person":"285"
+  },{
+    "title":"所向披靡的响应式开发",
+    "courseIntro":"忘记设备尺寸，一套代码适配多终端，响应式开发让用户体验和开发效率完美结合",
+    "price":"￥128.00",
+    "person":"1100"
+  },{
+    "title":"Python进阶强化训练",
+    "courseIntro":"实际编程和面试都会遇到的典型问题，更“平顺”的向中高级过渡",
+    "price":"￥168.00",
+    "person":"104"
+  },{
+    "title":"HTML5 移动Web App阅读器",
+    "courseIntro":"用HTML5、ES6、Ajax异步、Touch事件等技术，开发商业Web APP",
+    "price":"￥68.00",
+    "person":"1494"
+  }
+]
