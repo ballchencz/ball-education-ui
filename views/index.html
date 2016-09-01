@@ -54,29 +54,29 @@
     <div class="width_1200 margin_auto">
         <div class="width100 float_l height460 posi_relative">
             <div class="width100 float_l">
-                <div class="focusBox">
+                <div class="focusBox" ng-controller="cyclePicture">
                     <ul class="pic">
-                        <li><a><img src="../imgs/uiz21.jpg"/></a></li>
-                        <li><a><img src="../imgs/uiz20.jpg"/></a></li>
+                        <li ng-repeat="pic in cyclePictures">
+                            <a><img ng-src="{{pic.imgUrl}}"/></a>
+                        </li>
                     </ul>
                     <a class="prev" href="javascript:void(0)"></a>
                     <a class="next" href="javascript:void(0)"></a>
                     <ul class="hd">
-                        <li></li>
-                        <li></li>
+                        <li ng-repeat="pict in cyclePictures"></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="width_224 float_l height460 posi_absolute backg_jqian padding_t5 bianshou">
-                <div class="width100 float_l tab_qiehuan ">
+            <div class="width_224 float_l height460 posi_absolute backg_jqian padding_t5 bianshou" ng-controller="courseCategory">
+                <div class="width100 float_l tab_qiehuan" ng-repeat="category in courseCategorys" on-finish-render-filters>
                     <div class="width100 float_l text_c height64 line_hei64 color_white bianhuabeijing backg_jqian padding_lr20">
                         <div class="width100 float_l text_l height64 line_hei64 color_white border_b_baise fon_siz16">
-                            <span>前端开发</span>
+                            <span ng-bind="category.categoryName"></span>
                             <span class="float_r">></span>
                         </div>
                     </div>
-                    <div class="width_700 float_l lunbofenlei dis_none img_backg15">
+                    <div class="width_700 float_l lunbofenlei dis_none" ng-style="{'background-image':'url({{category.bgImgUrl}})'}">
                         <div class="width100 float_l padding40">
                             <div class="width100 float_l margin_b40">
                                 <span class="width100 color_shenred fon_siz16 float_l margin_b20">分类目录</span>
@@ -103,177 +103,8 @@
                     </div>
                 </div>
 
-                <div class="width100 float_l tab_qiehuan">
-                    <div class="width100 float_l text_c height64 line_hei64 color_white bianhuabeijing backg_jqian padding_lr20">
-                        <div class="width100 float_l text_l height64 line_hei64 color_white border_b_baise fon_siz16">
-                            <span>后端开发</span>
-                            <span class="float_r">></span>
-                        </div>
-                    </div>
-                    <div class="width_700 float_l lunbofenlei dis_none img_backg16">
-                        <div class="width100 float_l padding40">
-                            <div class="width100 float_l margin_b40">
-                                <span class="width100 color_shenred fon_siz16 float_l margin_b20">分类目录</span>
-                                <ul class="width100 ul_lis float_l">
-                                    <li><a>Photoshop</a></li>
-                                    <li>/</li>
-                                    <li><a>Maya</a></li>
-                                    <li>/</li>
-                                    <li><a>Premiere</a></li>
-                                    <li>/</li>
-                                    <li><a>ZBrush</a></li>
-                                </ul>
-                            </div>
 
-                            <div class="width100 float_l margin_b40">
-                                <span class="width100 color_shenred fon_siz16 float_l margin_b20">推荐</span>
-                                <ul class="width100 ul_lis float_l">
-                                    <li class="width100 float_l margin_b15"><a>课程 | ps入门教程Ⅱ-路径</a></li>
-                                    <li class="width100 float_l margin_b15"><a>课程 | 手机UI设计基础-尺寸</a></li>
-                                    <li class="width100 float_l margin_b15"><a>课程 | PS入门基础-魔幻调色</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="width100 float_l tab_qiehuan">
-                    <div class="width100 float_l text_c height64 line_hei64 color_white bianhuabeijing backg_jqian padding_lr20">
-                        <div class="width100 float_l text_l height64 line_hei64 color_white border_b_baise fon_siz16">
-                            <span>移动开发</span>
-                            <span class="float_r">></span>
-                        </div>
-                    </div>
-                    <div class="width_700 float_l lunbofenlei dis_none img_backg17">
-                        <div class="width100 float_l padding40">
-                            <div class="width100 float_l margin_b40">
-                                <span class="width100 color_shenred fon_siz16 float_l margin_b20">分类目录</span>
-                                <ul class="width100 ul_lis float_l">
-                                    <li><a>Photoshop</a></li>
-                                    <li>/</li>
-                                    <li><a>Maya</a></li>
-                                    <li>/</li>
-                                    <li><a>Premiere</a></li>
-                                    <li>/</li>
-                                    <li><a>ZBrush</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="width100 float_l margin_b40">
-                                <span class="width100 color_shenred fon_siz16 float_l margin_b20">推荐</span>
-                                <ul class="width100 ul_lis float_l">
-                                    <li class="width100 float_l margin_b15"><a>课程 | ps入门教程Ⅱ-路径</a></li>
-                                    <li class="width100 float_l margin_b15"><a>课程 | 手机UI设计基础-尺寸</a></li>
-                                    <li class="width100 float_l margin_b15"><a>课程 | PS入门基础-魔幻调色</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="width100 float_l tab_qiehuan">
-                    <div class="width100 float_l text_c height64 line_hei64 color_white bianhuabeijing backg_jqian padding_lr20">
-                        <div class="width100 float_l text_l height64 line_hei64 color_white border_b_baise fon_siz16">
-                            <span>数据库</span>
-                            <span class="float_r">></span>
-                        </div>
-                    </div>
-                    <div class="width_700 float_l lunbofenlei dis_none img_backg18">
-                        <div class="width100 float_l padding40">
-                            <div class="width100 float_l margin_b40">
-                                <span class="width100 color_shenred fon_siz16 float_l margin_b20">分类目录</span>
-                                <ul class="width100 ul_lis float_l">
-                                    <li><a>Photoshop</a></li>
-                                    <li>/</li>
-                                    <li><a>Maya</a></li>
-                                    <li>/</li>
-                                    <li><a>Premiere</a></li>
-                                    <li>/</li>
-                                    <li><a>ZBrush</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="width100 float_l margin_b40">
-                                <span class="width100 color_shenred fon_siz16 float_l margin_b20">推荐</span>
-                                <ul class="width100 ul_lis float_l">
-                                    <li class="width100 float_l margin_b15"><a>课程 | ps入门教程Ⅱ-路径</a></li>
-                                    <li class="width100 float_l margin_b15"><a>课程 | 手机UI设计基础-尺寸</a></li>
-                                    <li class="width100 float_l margin_b15"><a>课程 | PS入门基础-魔幻调色</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="width100 float_l tab_qiehuan">
-                    <div class="width100 float_l text_c height64 line_hei64 color_white bianhuabeijing backg_jqian padding_lr20">
-                        <div class="width100 float_l text_l height64 line_hei64 color_white border_b_baise fon_siz16">
-                            <span>云计算&大数据</span>
-                            <span class=" float_r">></span>
-                        </div>
-                    </div>
-                    <div class="width_700 float_l lunbofenlei dis_none img_backg16">
-                        <div class="width100 float_l padding40">
-                            <div class="width100 float_l margin_b40">
-                                <span class="width100 color_shenred fon_siz16 float_l margin_b20">分类目录</span>
-                                <ul class="width100 ul_lis float_l">
-                                    <li><a>Photoshop</a></li>
-                                    <li>/</li>
-                                    <li><a>Maya</a></li>
-                                    <li>/</li>
-                                    <li><a>Premiere</a></li>
-                                    <li>/</li>
-                                    <li><a>ZBrush</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="width100 float_l margin_b40">
-                                <span class="width100 color_shenred fon_siz16 float_l margin_b20">推荐</span>
-                                <ul class="width100 ul_lis float_l">
-                                    <li class="width100 float_l margin_b15"><a>课程 | ps入门教程Ⅱ-路径</a></li>
-                                    <li class="width100 float_l margin_b15"><a>课程 | 手机UI设计基础-尺寸</a></li>
-                                    <li class="width100 float_l margin_b15"><a>课程 | PS入门基础-魔幻调色</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="width100 float_l tab_qiehuan">
-                    <div class="width100 float_l text_c height64 line_hei64 color_white bianhuabeijing backg_jqian padding_lr20">
-                        <div class="width100 float_l text_l height64 line_hei64 color_white border_b_baise fon_siz16">
-                            <span>运维&测试</span>
-                            <span class="float_r">></span>
-                        </div>
-                    </div>
-                    <div class="width_700 float_l lunbofenlei dis_none img_backg15">
-                        <div class="width100 float_l padding40">
-                            <div class="width100 float_l margin_b40">
-                                <span class="width100 color_shenred fon_siz16 float_l margin_b20">分类目录</span>
-                                <ul class="width100 ul_lis float_l">
-                                    <li><a>Photoshop</a></li>
-                                    <li>/</li>
-                                    <li><a>Maya</a></li>
-                                    <li>/</li>
-                                    <li><a>Premiere</a></li>
-                                    <li>/</li>
-                                    <li><a>ZBrush</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="width100 float_l margin_b40">
-                                <span class="width100 color_shenred fon_siz16 float_l margin_b20">推荐</span>
-                                <ul class="width100 ul_lis float_l">
-                                    <li class="width100 float_l margin_b15"><a>课程 | ps入门教程Ⅱ-路径</a></li>
-                                    <li class="width100 float_l margin_b15"><a>课程 | 手机UI设计基础-尺寸</a></li>
-                                    <li class="width100 float_l margin_b15"><a>课程 | PS入门基础-魔幻调色</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="width100 float_l tab_qiehuan ">
+<!--                <div class="width100 float_l tab_qiehuan ">
                     <div class="width100 float_l text_c height64 line_hei64 color_white bianhuabeijing backg_jqian padding_lr20">
                         <div class="width100 float_l text_l height64 line_hei64 color_white border_b_baise fon_siz16">
                             <span>视觉设计</span>
@@ -305,7 +136,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
 
         </div>
@@ -338,13 +169,7 @@
                                 <span>
                                     <a href="#"></a>
                                 </span>
-                                <a href="#" ng-bind="article.title"></a>
-                            </li>
-                            <li ng-repeat="childCategory in category.children">
-                                <span>
-                                    <a href="#" ng-bind="childCategory.categoryName"></a>
-                                </span>
-                                <a href="#" ></a>
+                                <a href="#" ng-bind="article.title" title="{{article.title}}"></a>
                             </li>
                         </ul>
                     </div>
@@ -353,13 +178,13 @@
         </div>
     </div>
 </div>
-<!-- 实战推荐 -->
+<!-- 在线课堂 -->
 <div class="width100 float_l margin_b40">
     <div class="width_1200 margin_auto">
 
         <div class="width100 float_l margin_b20">
             <div class="float_l">
-                <span class="fon_siz16">实战推荐</span>
+                <span class="fon_siz16">在线课堂</span>
             </div>
             <div class="float_r bianshou">
                 <span>更多></span>
@@ -387,13 +212,13 @@
     </div>
 </div>
 
-<!-- 免费好课 -->
+<!-- 智源精品 -->
 <div class="width100 float_l margin_b40">
     <div class="width_1200 margin_auto">
 
         <div class="width100 float_l margin_b20">
             <div class="float_l">
-                <span class="fon_siz16">免费好课</span>
+                <span class="fon_siz16">智源精品</span>
             </div>
             <div class="float_r bianshou">
                 <span>更多></span>
@@ -420,12 +245,6 @@
 
     </div>
 </div>
-
-<!-- 学习资源
-<div class="width100 float_l backg_qiangray padding_b45">
-</div>-->
-
-
 <!-- 页脚 -->
 <div class="width100 float_l padding_t30 height193">
     <div class="width_1200 margin_auto">

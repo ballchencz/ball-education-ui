@@ -1,0 +1,29 @@
+[{
+  "id":"0",
+  "categoryName":"初中、高中",
+  "bgImgUrl":"../imgs/be.png"
+},{
+  "id":"1",
+  "categoryName":"出国、留学",
+  "bgImgUrl":"../imgs/data.png"
+},{
+  "id":"2",
+  "categoryName":"艺术",
+  "bgImgUrl":"../imgs/fe.png"
+},{
+  "id":"3",
+  "categoryName":"体育",
+  "bgImgUrl":"../imgs/be.png"
+},{
+  "id":"4",
+  "categoryName":"生活、兴趣",
+  "bgImgUrl":"../imgs/data.png"
+},{
+  "id":"5",
+  "categoryName":"外教英语",
+  "bgImgUrl":"../imgs/fe.png"
+},{
+  "id":"6",
+  "categoryName":"雅思培训",
+  "bgImgUrl":"../imgs/photo.png"
+}]
