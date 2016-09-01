@@ -56,7 +56,7 @@
             <div class="width100 float_l">
                 <div class="focusBox" ng-controller="cyclePicture">
                     <ul class="pic">
-                        <li ng-repeat="pic in cyclePictures">
+                        <li ng-repeat="pic in cyclePictures" on-finish-render-filters>
                             <a><img ng-src="{{pic.imgUrl}}"/></a>
                         </li>
                     </ul>

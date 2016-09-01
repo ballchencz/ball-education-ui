@@ -39,11 +39,11 @@ require(['./js/index-url','angular','jquery','jquery-super-slide','angular-ui-ro
      */
     index.controller('cyclePicture',['$scope','$http',function($scope,$http){
         $http.get(URL.getCyclePicture,[]).success(function(data,status,headers,config){
-            console.log(data);
             $scope.cyclePictures = data;
         }).error(function(data,status,headers,config){
         });
         $scope.$on('ngRepeatFinished', function (ngRepeatFinishedEvent) {
+            console.log($(".focusBox"))
             //渲染完成，加载事件
             $(".focusBox").slide({ mainCell:".pic",effect:"left", autoPlay:true, delayTime:500});
         });
