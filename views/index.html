@@ -72,7 +72,7 @@
                 <div class="width100 float_l tab_qiehuan" ng-repeat="category in courseCategorys" on-finish-render-filters>
                     <div class="width100 float_l text_c height64 line_hei64 color_white bianhuabeijing backg_jqian padding_lr20">
                         <div class="width100 float_l text_l height64 line_hei64 color_white border_b_baise fon_siz16">
-                            <span ng-bind="category.categoryName"></span>
+                            <a href="{{category.src}}"><span ng-bind="category.categoryName"></span></a>
                             <span class="float_r">></span>
                         </div>
                     </div>
