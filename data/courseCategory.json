@@ -178,55 +178,6 @@
     }]
   },{
     "id":"0",
-    "categoryName":"中考",
-    "categories":[{
-      "id":"0",
-      "categoryName":"数学"
-    },{
-      "id":"0",
-      "categoryName":"语文"
-    },{
-      "id":"0",
-      "categoryName":"英语"
-    },{
-      "id":"0",
-      "categoryName":"地理"
-    },{
-      "id":"0",
-      "categoryName":"政治"
-    },{
-      "id":"0",
-      "categoryName":"物理"
-    },{
-      "id":"0",
-      "categoryName":"化学"
-    },{
-      "id":"0",
-      "categoryName":"历史"
-    },{
-      "id":"0",
-      "categoryName":"生物"
-    },{
-      "id":"0",
-      "categoryName":"理综"
-    },{
-      "id":"0",
-      "categoryName":"文综"
-    },{
-      "id":"0",
-      "categoryName":"中考择校"
-    },{
-      "id":"0",
-      "categoryName":"中考全科辅导"
-    },{
-      "id":"0",
-      "categoryName":"中考心理辅导"
-    },{
-      "id":"0",
-      "categoryName":"科学"
-    }]
-  },{
-    "id":"0",
     "categoryName":"高一",
     "categories":[{
       "id":"0",
