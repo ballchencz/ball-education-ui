@@ -72,7 +72,7 @@
                 <div class="width100 float_l tab_qiehuan" ng-repeat="category in courseCategorys" on-finish-render-filters>
                     <div class="width100 float_l text_c height64 line_hei64 color_white bianhuabeijing backg_jqian padding_lr20">
                         <div class="width100 float_l text_l height64 line_hei64 color_white border_b_baise fon_siz16">
-                            <a href="{{category.src}}"><span ng-bind="category.categoryName"></span></a>
+                            <a href="#"><span ng-bind="category.categoryName"></span></a>
                             <span class="float_r">></span>
                         </div>
                     </div>
@@ -80,65 +80,27 @@
                         <div class="width100 float_l padding40">
                             <div class="width100 float_l margin_b40">
                                 <span class="width100 color_shenred fon_siz16 float_l margin_b20">分类目录</span>
-                                <ul class="width100 ul_lis float_l">
-                                    <li><a>Photoshop</a></li>
-                                    <li>/</li>
-                                    <li><a>Maya</a></li>
-                                    <li>/</li>
-                                    <li><a>Premiere</a></li>
-                                    <li>/</li>
-                                    <li><a>ZBrush</a></li>
-                                </ul>
+                                <div ng-repeat="secondCategory in category.categories">
+                                    <span class="b_weight_bold" ng-bind="secondCategory.categoryName"></span>
+                                    <ul class="width100 ul_lis float_l">
+                                        <li ng-repeat-start>|</li>
+                                        <li ng-repeat-end="thirdCategory in secondCategory.categories"><a ng-bind="thirdCategory.categoryName"></a></li>
+                                    </ul>
+                                </div>
                             </div>
 
-                            <div class="width100 float_l margin_b40">
+<!--                            <div class="width100 float_l margin_b40">
                                 <span class="width100 color_shenred fon_siz16 float_l margin_b20">推荐</span>
                                 <ul class="width100 ul_lis float_l">
                                     <li class="width100 float_l margin_b15"><a>课程 | ps入门教程Ⅱ-路径</a></li>
                                     <li class="width100 float_l margin_b15"><a>课程 | 手机UI设计基础-尺寸</a></li>
                                     <li class="width100 float_l margin_b15"><a>课程 | PS入门基础-魔幻调色</a></li>
                                 </ul>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
-
-
-<!--                <div class="width100 float_l tab_qiehuan ">
-                    <div class="width100 float_l text_c height64 line_hei64 color_white bianhuabeijing backg_jqian padding_lr20">
-                        <div class="width100 float_l text_l height64 line_hei64 color_white border_b_baise fon_siz16">
-                            <span>视觉设计</span>
-                            <span class="float_r">></span>
-                        </div>
-                    </div>
-                    <div class="width_700 float_l lunbofenlei dis_none img_backg17">
-                        <div class="width100 float_l padding40">
-                            <div class="width100 float_l margin_b40">
-                                <span class="width100 color_shenred fon_siz16 float_l margin_b20">分类目录</span>
-                                <ul class="width100 ul_lis float_l">
-                                    <li><a>Photoshop</a></li>
-                                    <li>/</li>
-                                    <li><a>Maya</a></li>
-                                    <li>/</li>
-                                    <li><a>Premiere</a></li>
-                                    <li>/</li>
-                                    <li><a>ZBrush</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="width100 float_l margin_b40">
-                                <span class="width100 color_shenred fon_siz16 float_l margin_b20">推荐</span>
-                                <ul class="width100 ul_lis float_l">
-                                    <li class="width100 float_l margin_b15"><a>课程 | ps入门教程Ⅱ-路径</a></li>
-                                    <li class="width100 float_l margin_b15"><a>课程 | 手机UI设计基础-尺寸</a></li>
-                                    <li class="width100 float_l margin_b15"><a>课程 | PS入门基础-魔幻调色</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
             </div>
-
         </div>
     </div>
 </div>
