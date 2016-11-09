@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>山姆钢琴</title>
+    <link rel="stylesheet" href="../js/layui/css/layui.css"/>
+    <style type="text/css">
+        .title{position: fixed; width: 100%}
+        .title li a{font-size: 18px;}
+        .login{float: right;margin-right: 10px;}
+        .login li a{font-size: 16px; float: left;}
+        .login li span{float: left;}
+        .login .search{float: left ;line-height: 30px;margin-top: 10px;margin-right: 30px;}
+        /*------------轮播图---------------*/
+        .carousel{padding-top: 68px;overflow:hidden;}
+        .carousel .pic{float: left;}
+        .carousel .pic li{display: none;}
+        .carousel .pic li:first-child{display: block;}
+        .carousel .pic li a{display: block}
+        .carousel .pic li a img{height: 480px;width: 100%}
+        .carousel .prev{width: 56px;height: 88px;left:0;top:40%;position: absolute;
+            background: url("../images/left.png") 0 0 no-repeat;}
+        .carousel .next{width: 56px;height: 88px;top:40%;right: 0;position: absolute;
+            background: url("../images/right.png") 0 0 no-repeat;}
+    </style>
+</head>
+<body>
+<ul class="layui-nav title">
+    <li class="layui-nav-item"><a href="#"><img src="../images/logo.jpg" alt="山姆钢琴" width="38" height="38"/></a></li>
+    <li class="layui-nav-item layui-this"><a href="#">首页</a></li>
+    <li class="layui-nav-item"><a href="#">谱库</a></li>
+    <li class="layui-nav-item"><a href="#">课堂</a></li>
+    <li class="layui-nav-item"><a href="#">社区</a></li>
+
+    <div class="login">
+        <form action="" class="layui-form search">
+            <div class="layui-form-item">
+                <div class="layui-inline" style="width:84px;">
+                    <select name="city" lay-verify="required">
+                        <option value="0">钢琴谱</option>
+                        <option value="1">课堂</option>
+                    </select>
+                </div>
+                <div class="layui-inline" style="margin-left: -14px;">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input" style="border-radius: 0px;">
+                </div>
+                <div class="layui-inline" style="margin-left: -14px;">
+                    <button class="layui-btn layui-btn-normal">搜索</button>
+                </div>
+            </div>
+        </form>
+        <li class="layui-nav-item"><a href="#">登陆</a><span>|</span><a href="#">注册</a></li>
+    </div>
+</ul>
+<!-- 广告轮播 -->
+<div class="carousel">
+    <ul class="pic">
+        <li>
+            <a><img src="../images/piano-1.jpg"/></a>
+        </li>
+        <li>
+            <a><img src="../images/piano-2.jpg"/></a>
+        </li>
+        <li>
+            <a><img src="../images/piano-3.jpg"/></a>
+        </li>
+        <li>
+            <a><img src="../images/piano-4.jpg"/></a>
+        </li>
+        <li>
+            <a><img src="../images/piano-5.jpg"/></a>
+        </li>
+    </ul>
+    <a class="prev" href="javascript:void(0)"></a>
+    <a class="next" href="javascript:void(0)"></a>
+    <ul class="hd">
+        <li ng-repeat="pict in cyclePictures"></li>
+    </ul>
+</div>
+</body>
+<script type="text/javascript" src="../js/layui/layui.js"></script>
+<script type="text/javascript" src="../js/index_1.js"></script>
+</html>

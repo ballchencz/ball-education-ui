@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CKPlayer</title>
+</head>
+<body>
+    <div id="a1"></div>
+    <video id="video" src="" autoplay=""></video>
+</body>
+<!--<script type="text/javascript" src="../js/ckplayer6.8/ckplayer/ckplayer.js"></script>-->
+    <script type="text/javascript">
+/*    var flashvars={
+        f:'http://localhost:8080/data/邓紫棋 - 泡沫.mp4',
+        c:0
+    };
+    var video=['http://localhost:8080/data/邓紫棋 - 泡沫.mp4->video/mp4'];
+    CKobject.embed('../js/ckplayer6.8/ckplayer/ckplayer.swf','a1','ckplayer_a1','600','400',false,flashvars,video);*/
+    var video_element = document.getElementById("video");
+    if (navigator.getUserMedia) { // 标准的API
+        navigator.getUserMedia({ "video": true }, function (stream) {
+            console.log(stream);
+            video_element.src = stream;
+            video_element.play();
+        }, function(error){
+            console.log(error);
+        });
+    } else if (navigator.webkitGetUserMedia) { // WebKit 核心的API
+        navigator.webkitGetUserMedia({ "video": true }, function (stream) {
+            console.log(stream);
+            video_element.src = window.webkitURL.createObjectURL(stream);
+            video_element.play();
+        }, function(error){
+            console.log(error);
+        });
+    }
+</script>
+</html>
