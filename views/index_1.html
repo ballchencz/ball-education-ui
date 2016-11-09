@@ -16,20 +16,30 @@
         .carousel .pic{float: left;}
         .carousel .pic li{display: none;}
         .carousel .pic li:first-child{display: block;}
-        .carousel .pic li a{display: block}
-        .carousel .pic li a img{height: 480px;width: 100%}
+        .carousel .pic li a{display: block; height: 480px;width: 100%}
+        /*.carousel .pic li a img{height: 480px;width: 100%}*/
         .carousel .prev{width: 56px;height: 88px;left:0;top:40%;position: absolute;
             background: url("../images/left.png") 0 0 no-repeat;}
         .carousel .next{width: 56px;height: 88px;top:40%;right: 0;position: absolute;
             background: url("../images/right.png") 0 0 no-repeat;}
+        .content{color: white;position: absolute;top: 40%;bottom:40%;left: 20%;right:20%;text-align: center;}
+        .content h1{font-size: 36px;}
+        .content p{font-size: 20px;}
+       /* .container{width: 1170px;margin: 0px auto;}*/
+        /*----------优秀作业---------------*/
+        .excellentHomeWork{width: 1170px;height: 200px;margin:0px auto;padding-top: 30px;}
+        .excellentHomeWork h1{font-size: 22px;}
+        .homeWork{width: 162px;height: 162px;border-radius: 100%;background-color: #1E9FFF;float: left;margin: 0px 30px;}
+        .homeWork span{ display:block;padding-top: 100px;text-align: center;color: whitesmoke;font-size: 14px;}
     </style>
 </head>
 <body>
+<!--头部开始-->
 <ul class="layui-nav title">
     <li class="layui-nav-item"><a href="#"><img src="../images/logo.jpg" alt="山姆钢琴" width="38" height="38"/></a></li>
     <li class="layui-nav-item layui-this"><a href="#">首页</a></li>
-    <li class="layui-nav-item"><a href="#">谱库</a></li>
-    <li class="layui-nav-item"><a href="#">课堂</a></li>
+    <li class="layui-nav-item"><a href="#">拜厄</a></li>
+    <li class="layui-nav-item"><a href="#">车尔尼</a></li>
     <li class="layui-nav-item"><a href="#">社区</a></li>
 
     <div class="login">
@@ -52,23 +62,54 @@
         <li class="layui-nav-item"><a href="#">登陆</a><span>|</span><a href="#">注册</a></li>
     </div>
 </ul>
-<!-- 广告轮播 -->
+<!--头部结束-->
+<!-- 广告轮播开始 -->
 <div class="carousel">
     <ul class="pic">
         <li>
-            <a><img src="../images/piano-1.jpg"/></a>
+            <a style="background: url('../images/piano-1.jpg')">
+                <img src="../images/piano-1.jpg"/>
+                <div class="content">
+                    <h1>海上钢琴师：用音乐救赎孤独感</h1>
+                    <p>《海上钢琴师》的英文片名为《The legend of 1900 》直译就是“1900的传奇”……</p>
+                </div>
+            </a>
         </li>
         <li>
-            <a><img src="../images/piano-2.jpg"/></a>
+            <a>
+                <img src="../images/piano-2.jpg"/>
+                <div class="content">
+                    <h1>在肖邦心脏前脱帽</h1>
+                    <p>从北京飞到波兰，机场的名字就是肖邦机场。在波兰的两天，走在街头，漫步在公园或者小巷深处，听到的或者看到的都是肖邦……</p>
+                </div>
+            </a>
         </li>
         <li>
-            <a><img src="../images/piano-3.jpg"/></a>
+            <a>
+                <img src="../images/piano-3.jpg"/>
+                <div class="content">
+                    <h1>用膝盖行走的钢琴家</h1>
+                    <p>她是一个不幸的女孩，出生于韩国一个不幸的家庭。她的父亲是一个下肢瘫痪的伤残军人，曾经为了止痛服用了10年的吗啡……</p>
+                </div>
+            </a>
         </li>
         <li>
-            <a><img src="../images/piano-4.jpg"/></a>
+            <a>
+                <img src="../images/piano-4.jpg"/>
+                <div class="content">
+                    <h1>钢琴上的黑白左右手</h1>
+                    <p>1983年春天，玛格丽特·帕崔克走进“东南老人疗养中心”，开始了她的疗养生活……</p>
+                </div>
+            </a>
         </li>
         <li>
-            <a><img src="../images/piano-5.jpg"/></a>
+            <a>
+                <img src="../images/piano-5.jpg"/>
+                <div class="content">
+                    <h1>会弹钢琴的小狗</h1>
+                    <p>主人有一只非常聪明又特别的小狗，因为它和别的小狗不一样，会弹钢琴哦。它的名字叫托利，主人是马戏团的老板……</p>
+                </div>
+            </a>
         </li>
     </ul>
     <a class="prev" href="javascript:void(0)"></a>
@@ -77,6 +118,22 @@
         <li ng-repeat="pict in cyclePictures"></li>
     </ul>
 </div>
+<!-- 广告轮播结束 -->
+
+<!-- 优秀作业开始 -->
+<div class="excellentHomeWork">
+    <h1>优秀作业</h1>
+    <a href="#" style="float: right;margin-bottom: 10px;">更多</a>
+    <hr/>
+    <div class="homeWork"><span>小星星变奏曲</span></div>
+    <div class="homeWork"><span>夜的钢琴曲5</span></div>
+    <div class="homeWork"><span>River in the flow</span></div>
+    <div class="homeWork"><span>卡农</span></div>
+    <div class="homeWork"><span>fade</span></div>
+</div>
+    <!-- 优秀作业结束-->
+</div>
+
 </body>
 <script type="text/javascript" src="../js/layui/layui.js"></script>
 <script type="text/javascript" src="../js/index_1.js"></script>

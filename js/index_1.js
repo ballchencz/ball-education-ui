@@ -5,13 +5,38 @@ layui.use(['jquery', 'form'], function(){
     var form = layui.form(); //只有执行了这一步，部分表单元素才会修饰成功
     var $ = layui.jquery;
     $(function(){
+        setInterval(function(){
+            var visibleLi = $(".pic").children(":visible");
+            var visibleIndex = visibleLi.next().index();
+            if(visibleIndex!=-1){
+                visibleLi.hide();
+                visibleLi.next().show();
+            }else{
+                $(".pic").children().hide();
+                $(".pic").children(":first").show();
+            }
+        }, 3000);
         $(".prev").bind("click",function(){
-            /*获得所有轮播图数量*/
-            var picLength = $(".carousel .pic").children().length;
-            console.log($(".carousel .pic").children());
+            var visibleLi = $(".pic").children(":visible");
+            var visibleIndex = visibleLi.next().index();
+            if(visibleIndex!=-1){
+                visibleLi.hide();
+                visibleLi.next().show();
+            }else{
+                $(".pic").children().hide();
+                $(".pic").children(":first").show();
+            }
         });
         $(".next").bind("click",function(){
-            alert(2);
+            var visibleLi = $(".pic").children(":visible");
+            var visibleIndex = visibleLi.prev().index();
+            if(visibleIndex==-1){
+                $(".pic").children().hide();
+                $(".pic").children(":last").show();
+            }else{
+                visibleLi.hide();
+                visibleLi.prev().show();
+            }
         });
     })
 });
