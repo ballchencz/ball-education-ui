@@ -38,5 +38,11 @@ layui.use(['jquery', 'form'], function(){
                 visibleLi.prev().show();
             }
         });
+        /*œ‘ æ≤•∑≈∞¥≈•*/
+        $(".homeWork").hover(function(){
+           $(this).children("img").css("visibility","visible");
+        },function(){
+            $(this).children("img").css("visibility","hidden");
+        });
     })
 });

@@ -5,6 +5,10 @@
     <title>山姆钢琴</title>
     <link rel="stylesheet" href="../js/layui/css/layui.css"/>
     <style type="text/css">
+        body{
+            background: whitesmoke;
+        }
+        /*-------头部-------------*/
         .title{position: fixed; width: 100%}
         .title li a{font-size: 18px;}
         .login{float: right;margin-right: 10px;}
@@ -28,9 +32,30 @@
        /* .container{width: 1170px;margin: 0px auto;}*/
         /*----------优秀作业---------------*/
         .excellentHomeWork{width: 1170px;height: 200px;margin:0px auto;padding-top: 30px;}
-        .excellentHomeWork h1{font-size: 22px;}
+        .excellentHomeWork h1{font-size: 22px;float: left; margin-bottom: 10px;}
+        .excellentHomeWork a{display: block;float:right;height: 30px;line-height:40px;}
         .homeWork{width: 162px;height: 162px;border-radius: 100%;background-color: #1E9FFF;float: left;margin: 0px 30px;}
-        .homeWork span{ display:block;padding-top: 100px;text-align: center;color: whitesmoke;font-size: 14px;}
+        .homeWork span{ display:block;padding-top: 10px;text-align: center;color: #888888;font-size: 14px;}
+        .homeWork:hover{box-shadow: #bfbfbf 3px 3px 3px 3px;}
+        .homeWork img{widht:60px;height: 60px;margin:50px 50px;vertical-align:middle;visibility: hidden;cursor: pointer;}
+        .homeWork img:hover{transform: scale(1.1);}
+        /*--------课程--------------*/
+        .course{width: 1170px;height: 200px;margin:0px auto;padding-top: 70px;}
+        .course h1{font-size: 22px;float: left; margin-bottom: 10px;}
+        .course a{display: block;float:right;height: 30px;line-height:40px;}
+        .course .courseContent{width: 360px;height: 300px;border:1px solid #bfbfbf;float: left;margin: 0px 10px;border-radius: 2%;}
+        .course .courseContent{box-shadow: #bfbfbf 3px 3px 3px;}
+        .course .courseContent img{display: block;margin: 5px 4px;border-radius: 2%;border: 1px solid #bfbfbf;}
+        .course .courseContent img:hover{transform: scale(1.05);cursor:pointer;}
+        .course .courseContent .courseArticle{color: #888888;width: 100%;height: 70px;align-content: center;}
+        .course .courseContent .courseArticle a{font-size: 16px;display: block;float: left;margin-left: 120px;cursor: pointer;}
+        /*--------老师作品----------*/
+        .teacherProduction{width: 1170px;height: 50px;margin:0px auto;padding-top: 200px;}
+        .teacherProduction h1{font-size: 22px;float: left; margin-bottom: 10px;}
+        .teacherProduction a{display: block;float:right;height: 30px;line-height:40px;}
+        /*--------底部------------*/
+        .footer{background-color: #eeeeee;color: #666;font-weight: 300;height:80px;width: 100%;text-align: center;clear: both;}
+        .footer-main{position: relative;width: 1170px;margin: 0 auto;}
     </style>
 </head>
 <body>
@@ -119,21 +144,55 @@
     </ul>
 </div>
 <!-- 广告轮播结束 -->
-
 <!-- 优秀作业开始 -->
 <div class="excellentHomeWork">
     <h1>优秀作业</h1>
-    <a href="#" style="float: right;margin-bottom: 10px;">更多</a>
+    <a href="#">更多</a>
     <hr/>
-    <div class="homeWork"><span>小星星变奏曲</span></div>
-    <div class="homeWork"><span>夜的钢琴曲5</span></div>
-    <div class="homeWork"><span>River in the flow</span></div>
-    <div class="homeWork"><span>卡农</span></div>
-    <div class="homeWork"><span>fade</span></div>
+    <div class="homeWork" style="background: url('../images/excellent-homework-1.jpg')"><img src="../images/play-radio.png" alt=""/><span>小星星变奏曲</span></div>
+    <div class="homeWork" style="background: url('../images/excellent-homework-2.jpg') 20px 20px"><img src="../images/play-radio.png" alt=""/><span>夜的钢琴曲5</span></div>
+    <div class="homeWork" style="background: url('../images/excellent-homework-3.jpg') -70px -70px"><img src="../images/play-radio.png" alt=""/><span>River flows in you</span></div>
+    <div class="homeWork" style="background: url('../images/excellent-homework-4.jpg') -70px -30px"><img src="../images/play-radio.png" alt=""/><span>卡农</span></div>
+    <div class="homeWork" style="background: url('../images/excellent-homework-5.jpg')"><img src="../images/play-radio.png" alt=""/><span>fade</span></div>
 </div>
-    <!-- 优秀作业结束-->
+<!-- 优秀作业结束-->
+<!--课程开始-->
+<div class="course">
+    <h1>课程</h1>
+    <a href="#">更多</a>
+    <hr/>
+    <div class="courseContent">
+        <img src="../images/course-1.jpg" alt="庖丁解牛系列" width="350" height="230"/>
+        <div class="courseArticle">
+            <a>庖丁解牛系列</a>
+        </div>
+    </div>
+    <div class="courseContent">
+        <img src="../images/course-2.jpg" alt="拜厄练习曲" width="350" height="230"/>
+        <div class="courseArticle">
+            <a>拜厄练习曲</a>
+        </div>
+    </div>
+    <div class="courseContent">
+        <img src="../images/course-4.jpg" alt="车尔尼599示范及讲解" width="350" height="230"/>
+        <div class="courseArticle">
+            <a>车尔尼599示范及讲解</a>
+        </div>
+    </div>
 </div>
+<!--课程结束-->
+<!--老师作品开始-->
+<div class="teacherProduction">
 
+</div>
+<!--老师作品结束-->
+<!--底部开始-->
+<div class="footer">
+    <div class="footer-main">
+        <p>2016 © <a href="/">sampiano.com</a>&nbsp;山姆钢琴</p>
+    </div>
+</div>
+<!--底部结束-->
 </body>
 <script type="text/javascript" src="../js/layui/layui.js"></script>
 <script type="text/javascript" src="../js/index_1.js"></script>

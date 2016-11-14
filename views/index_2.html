@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>山姆钢琴</title>
+    <link rel="stylesheet" href="../js/layui/css/layui.css"/>
+    <style type="text/css">
+        body{background-color: #f5f8fa;font-family: Microsoft Yahei, "宋体", Arial;}
+        .f_l{float: left}
+        .f_r{float: right}
+        .center_content{width: 1170px;margin: 0px auto;background-color: transparent;}
+        /*-----nav头部开始-------*/
+        .nav{width: 100%;height: 68px;background-color:#393D49;}
+        .nav-container{height: 68px;}
+        .nav-container .logo{display: block;width: 38px;height: 38px;float: left;line-height: 68px;}
+        .nav-container .logo img{width: 38px;height: 38px;}
+        .nav-container ul li{line-height: 68px;font-size: 18px; float: left;margin:0px 16px;color: #c2c2c2}
+        .nav-container ul li a{color: #c2c2c2;width: 62px;height: 62px;display: block;text-align: center;}
+        .nav-container ul li a:hover{border-bottom: 2px solid #F7B824;transform: scale(1.1);color:#f5f8fa;}
+        .nav-container .login{float: right;width:140px;height: 100%;line-height: 68px;color: #c2c2c2;font-size: 18px;text-align: center;}
+        .nav-container .login a{font-size: 18px;display: block;width: 52px;height: 52px;color:#c2c2c2;}
+        .nav-container .login a:hover{border-bottom: 2px solid #F7B824;transform: scale(1.1);color:#f5f8fa;}
+        /*-----nav头部结束-------*/
+        /*-----中部开始----------*/
+        .middle{height: auto;}
+        /*----轮播图开始-----*/
+        .flexslider{margin:0px auto;position:relative;height:450px;overflow:hidden;zoom:1;}
+        .flex-viewport{max-height:2000px;-webkit-transition:all 1s ease;-moz-transition:all 1s ease;transition:all 1s ease;}
+        .flexslider .slides{zoom:1;}
+        .flex-direction-nav a{width:60px;height:90px;line-height:99em;overflow:hidden;margin:-60px 0 0;display:block;background:url(../js/jquery-lbt/images/ad_ctr.png) no-repeat;position:absolute;top:50%;z-index:10;cursor:pointer;opacity:0;filter:alpha(opacity=0);-webkit-transition:all .3s ease;}
+        .flex-direction-nav .flex-next{background-position:0 -90px;right:0;}
+        .flex-direction-nav .flex-prev{left:0;}
+        .flexslider:hover .flex-next{opacity:0.8;filter:alpha(opacity=25);}
+        .flexslider:hover .flex-prev{opacity:0.8;filter:alpha(opacity=25);}
+        .flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover{opacity:1;filter:alpha(opacity=50);}
+        .flex-control-nav{width:100%;position:absolute;bottom:10px;text-align:center;}
+        .flex-control-nav li{margin:0 5px;display:inline-block;zoom:1;*display:inline;}
+        .flex-control-paging li a{background:url(../js/jquery-lbt/images/dot.png) no-repeat 0 -16px;display:block;height:16px;overflow:hidden;text-indent:-99em;width:16px;cursor:pointer;}
+        .flex-control-paging li a.flex-active{background-position:0 0;}
+        .content{color: white;position: absolute;top: 40%;bottom:40%;left: 20%;right:20%;text-align: center;}
+        .content h1{font-size: 36px;}
+        .content p{font-size: 20px;}
+        /*----轮播图结束-----*/
+        /*---优秀作业开始-----*/
+        .excellent-homework{height: 200px; margin-top: 10px;}
+        .excellent-homework img{float: left;}
+        .excellent-homework h1{font-size: 22px;float: left;text-align: center;line-height: 42px;margin-left: 10px;font-weight: normal;}
+        .excellent-homework a{display: block;float: right;height: 42px;line-height:54px;}
+        .excellent-homework hr{background-color:#d81e06;}
+        .excellent-homework .homeWork{width: 162px;height: 162px;border-radius: 100%;background-color: #1E9FFF;float: left;margin: 0px 30px;}
+        .excellent-homework .homeWork span{ display:block;padding-top: 10px;text-align: center;color: #888888;font-size: 14px;}
+        .excellent-homework .homeWork:hover{box-shadow: #bfbfbf 3px 3px 3px 3px;}
+        .excellent-homework .homeWork img{widht:60px;height: 60px;margin:50px 50px;vertical-align:middle;cursor: pointer;visibility: hidden;}
+        .excellent-homework .homeWork img:hover{transform: scale(1.1);}
+        /*---优秀作业结束-----*/
+        /*---课程安排开始--------*/
+        .study-plan{height:200px;margin-top: 50px;}
+        .study-plan img{float: left;}
+        .study-plan h1{font-size: 22px;float: left;text-align: center;line-height: 42px;margin-left: 10px;font-weight: normal;}
+        .study-plan a{display: block;float: right;height: 42px;line-height:54px;}
+        .study-plan hr{background-color:#d81e06;margin-top: 5px;}
+        .study-plan ul li{float: left;line-height: 42px;margin: 0 10px;}
+        /*---课程安排结束--------*/
+        /*-----中部结束----------*/
+    </style>
+</head>
+<body>
+    <!--nav头部开始-->
+    <div class="nav">
+        <div class="nav-container center_content">
+            <a href="#" class="logo"><img src="../images/logo.jpg" alt="山姆钢琴"/></a>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">拜厄</a></li>
+                <li><a href="#">车尔尼</a></li>
+                <li><a href="#">社区</a></li>
+            </ul>
+            <div class="login">
+                <a href="#" class="f_l">登陆</a><span class="f_l">|</span><a href="#" class="f_l">注册</a>
+            </div>
+        </div>
+    </div>
+    <!--nav头部结束-->
+    <!--中部开始-->
+    <div class="middle">
+        <!--轮播图开始-->
+        <div class="cycle_pic flexslider center_content">
+            <ul class="slides">
+                <li><div class="img"><img src="../images/piano-1.jpg" alt="海上钢琴师" width="1170" height="450"/></div></li>
+                <li><div class="img"><img src="../images/piano-2.jpg" alt="在肖邦心脏前脱帽"width="1170" height="450"/></div></li>
+                <li><div class="img"><img src="../images/piano-3.jpg" alt="用膝盖行走的钢琴家" width="1170" height="450"/></div></li>
+                <li><div class="img"><img src="../images/piano-4.jpg" alt="钢琴上的黑白左右手" width="1170" height="450"/></div></li>
+                <li><div class="img"><img src="../images/piano-5.jpg" alt="会弹钢琴的小狗" width="1170" height="450"/></div></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>海上钢琴师：用音乐救赎孤独感</h1>
+            <p>《海上钢琴师》的英文片名为《The legend of 1900 》直译就是“1900的传奇”……</p>
+        </div>
+        <!--轮播图结束-->
+        <!--优秀课程开始-->
+        <div class="excellent-homework center_content middle_publish">
+            <img src="../images/excellent-homework.png" alt="优秀作业" width="42" height="42"/>
+            <h1>优秀作业</h1>
+            <a href="#">更多</a>
+            <hr/>
+            <div class="homeWork" style="background: url('../images/excellent-homework-1.jpg')"><img src="../images/play-radio.png" alt=""/><span>小星星变奏曲</span></div>
+            <div class="homeWork" style="background: url('../images/excellent-homework-2.jpg') 20px 20px"><img src="../images/play-radio.png" alt=""/><span>夜的钢琴曲5</span></div>
+            <div class="homeWork" style="background: url('../images/excellent-homework-3.jpg') -70px -70px"><img src="../images/play-radio.png" alt=""/><span>River flows in you</span></div>
+            <div class="homeWork" style="background: url('../images/excellent-homework-4.jpg') -70px -30px"><img src="../images/play-radio.png" alt=""/><span>卡农</span></div>
+            <div class="homeWork" style="background: url('../images/excellent-homework-5.jpg')"><img src="../images/play-radio.png" alt=""/><span>fade</span></div>
+        </div>
+        <!--优秀课程结束-->
+        <!--学习计划开始-->
+        <div class="study-plan center_content">
+            <img src="../images/study-plan.png" alt="学习计划" width="42" height="42"/>
+            <h1>学习计划</h1>
+            <ul>
+                <li>基本功</li>
+                <li>曲谱</li>
+            </ul>
+            <a href="#">更多</a>
+            <hr/>
+        </div>
+        <!--学习计划结束-->
+    </div>
+    <!--中部结束-->
+    <!--底部开始-->
+    <div class="footer">
+
+    </div>
+    <!--底部结束-->
+</body>
+<script type="text/javascript" src="../js/layui/layui.js"></script>
+<script type="text/javascript" src="../js/jquery-lbt/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery-lbt/js/slider.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.flexslider').flexslider({
+            animation: "slide",
+            direction:"horizontal",
+            easing:"swing",
+            after:function(slider){
+                switch (slider.currentSlide){
+                    case 0 :
+                            slider.next().children("h1").text("海上钢琴师：用音乐救赎孤独感");
+                            slider.next().children("p").text("《海上钢琴师》的英文片名为《The legend of 1900 》直译就是“1900的传奇”……");
+                        break;
+                    case 1 :
+                        slider.next().children("h1").text("在肖邦心脏前脱帽");
+                        slider.next().children("p").text("从北京飞到波兰，机场的名字就是肖邦机场。在波兰的两天，走在街头，漫步在公园或者小巷深处，听到的或者看到的都是肖邦……");
+                        break;
+                    case 2 :
+                        slider.next().children("h1").text("用膝盖行走的钢琴家");
+                        slider.next().children("p").text("她是一个不幸的女孩，出生于韩国一个不幸的家庭。她的父亲是一个下肢瘫痪的伤残军人，曾经为了止痛服用了10年的吗啡……");
+                        break;
+                    case 3:
+                        slider.next().children("h1").text("钢琴上的黑白左右手");
+                        slider.next().children("p").text("1983年春天，玛格丽特·帕崔克走进“东南老人疗养中心”，开始了她的疗养生活……");
+                        break;
+                    case 4:
+                        slider.next().children("h1").text("会弹钢琴的小狗");
+                        slider.next().children("p").text("主人有一只非常聪明又特别的小狗，因为它和别的小狗不一样，会弹钢琴哦。它的名字叫托利，主人是马戏团的老板……");
+                        break;
+                }
+            }
+        });
+        /*显示播放按钮*/
+        $(".homeWork").hover(function(){
+            $(this).children("img").css("visibility","visible");
+        },function(){
+            $(this).children("img").css("visibility","hidden");
+        });
+    });
+</script>
+</html>
