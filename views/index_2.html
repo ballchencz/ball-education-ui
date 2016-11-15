@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>山姆钢琴</title>
     <link rel="stylesheet" href="../js/layui/css/layui.css"/>
+    <link rel="stylesheet" href="../js/jquery-time/css/style.css"/>
     <style type="text/css">
         body{background-color: #f5f8fa;font-family: Microsoft Yahei, "宋体", Arial;}
         .f_l{float: left}
@@ -13,7 +14,7 @@
         .nav{width: 100%;height: 68px;background-color:#393D49;}
         .nav-container{height: 68px;}
         .nav-container .logo{display: block;width: 38px;height: 38px;float: left;line-height: 68px;}
-        .nav-container .logo img{width: 38px;height: 38px;}
+        .nav-container .logo img{width: 38px;height: 38px;border-radius: 16%}
         .nav-container ul li{line-height: 68px;font-size: 18px; float: left;margin:0px 16px;color: #c2c2c2}
         .nav-container ul li a{color: #c2c2c2;width: 62px;height: 62px;display: block;text-align: center;}
         .nav-container ul li a:hover{border-bottom: 2px solid #F7B824;transform: scale(1.1);color:#f5f8fa;}
@@ -53,14 +54,18 @@
         .excellent-homework .homeWork img{widht:60px;height: 60px;margin:50px 50px;vertical-align:middle;cursor: pointer;visibility: hidden;}
         .excellent-homework .homeWork img:hover{transform: scale(1.1);}
         /*---优秀作业结束-----*/
-        /*---课程安排开始--------*/
+        /*---学习计划开始--------*/
         .study-plan{height:200px;margin-top: 50px;}
         .study-plan img{float: left;}
         .study-plan h1{font-size: 22px;float: left;text-align: center;line-height: 42px;margin-left: 10px;font-weight: normal;}
-        .study-plan a{display: block;float: right;height: 42px;line-height:54px;}
+        .study-plan a{display: block;float: right;height: 42px;line-height:54px;color:#d81e06;}
+        .study-plan a:active{color:#eeeeee}
         .study-plan hr{background-color:#d81e06;margin-top: 5px;}
-        .study-plan ul li{float: left;line-height: 42px;margin: 0 10px;}
-        /*---课程安排结束--------*/
+        .study-plan ul li{line-height: 45px;margin: 0 20px;color:#d81e06;float: left;}
+        /*----基本功开始-----*/
+        .study-plan .basic-skill{width: 100%;height: auto;}
+        /*----基本功结束-----*/
+        /*---学习计划结束--------*/
         /*-----中部结束----------*/
     </style>
 </head>
@@ -115,12 +120,127 @@
         <div class="study-plan center_content">
             <img src="../images/study-plan.png" alt="学习计划" width="42" height="42"/>
             <h1>学习计划</h1>
-            <ul>
-                <li>基本功</li>
-                <li>曲谱</li>
-            </ul>
-            <a href="#">更多</a>
+<!--            <ul>
+                <li><a href="javascript:void(0)">基本功</a></li>
+                <li><a href="javascript:void(0)">曲谱</a></li>
+            </ul>-->
             <hr/>
+            <div class="paimai_list">
+                <div class="paimai_content">
+                    <!--前言-->
+                    <div class="list_head1">
+                        <div class="time_box" ><p>前言</p></div><!--<div class="time_content"><em></em><span></span></div>-->
+                        <div class="clear"></div>
+                    </div>
+                    <div class="list_content">
+                        <a href="#"><img src="../images/piano-basic-skill-1.jpg" width="520" height="198"/></a>
+                        <dl>
+                            <dt><h2>什么是基本功</h2></dt>
+                            <dd class="pm_organ">想用钢琴弹出优美的乐曲，基本功是必须要学习的。所谓基本功就是正确的弹琴方法。</dd>
+                        </dl>
+                    </div>
+                    <!--学习周期-->
+                    <div class="list_head1">
+                        <div class="time_box" ><p>学习周期</p></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="list_content">
+                        <a href="#"><img src="../images/piano-basic-skill-2.jpg" width="520" height="198" /></a>
+                        <dl>
+                            <dt><h2>关于基本功学习周期</h2></dt>
+                            <dd class="pm_organ">
+                                <p>基本功的学习周期按“月”划分。</p><br/>
+                                <p>大部分进度正常的同学通过4个月的学习可以完成第一个阶段的课程。</p><br/>
+                                <p>如果中间出差不能连续学习也可以暂停。</p><br/>
+                            </dd>
+                        </dl>
+                    </div>
+                    <!--如何学习-->
+                    <div class="list_head1">
+                        <div class="time_box" ><p>如何学习</p></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="list_content">
+                        <a href="#"><img src="../images/piano-basic-skill-3.jpg" width="520" height="198" /></a>
+                        <dl>
+                            <dt><h2>通过网络如何学习钢琴</h2></dt>
+                            <dd class="pm_organ">
+                                <p>通过网络学习，有效的降低了我们的学习成本，我们的学习理念是每天学习一点点。</p><br/>
+                                <p>基本功的学习是需要积累的，每天学习1个知识点，每天练习一首简单的练习曲。</p><br/>
+                                <p>每天发作业给老师，每天去解决一个问题。</p><br/>
+                                <p>学习效率会比传统面授课程高的多。</p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <!--在哪学习-->
+                    <div class="list_head1">
+                        <div class="time_box" ><p>在哪学习</p></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="list_content">
+                        <a href="#"><img src="../images/piano-basic-skill-4.jpg" width="520" height="198" /></a>
+                        <dl>
+                            <dt><h2>关于我们的教学安排</h2></dt>
+                            <dd class="pm_organ">
+                                <p>每个付费学员都会拥有一个班级，每个班级不超过40人。</p><br/>
+                                <p>老师通过QQ群视频授课，集体授课，1对1解答同学的问题，回复同学的作业。</p><br/>
+                                <p>如果落下了直播课也有录播课程可以观看。只要有时间就能随时随地学钢琴。</p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <!--关于学费-->
+                    <div class="list_head1">
+                        <div class="time_box" ><p>关于学费</p></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="list_content">
+                        <a href="#"><img src="../images/piano-basic-skill-5.jpg" width="520" height="198" /></a>
+                        <dl>
+                            <dt><h2>我们的收费制度</h2></dt>
+                            <dd class="pm_organ">
+                                <p>学费每个月100元-200元不等。</p><br/>
+                                <p>1个月的高品质学习付出的费用只等于线下钢琴老师1节课的课时费。</p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <!--定期活动-->
+                    <div class="list_head1">
+                        <div class="time_box" ><p>定期活动</p></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="list_content">
+                        <a href="#"><img src="../images/piano-basic-skill-7.jpg" width="520" height="198" /></a>
+                        <dl>
+                            <dt><h2>我们平时的集体活动</h2></dt>
+                            <dd class="pm_organ">
+                                <p>每周末除了正常的课程和作业回复外，周末会进行周学习总结。</p><br/>
+                                <p>把一周学习的重点内容更细致的剖析复习。</p><br/>
+                                <p>月末进行汇报演出，让同学试胆，避免弹琴见光死的悲剧。</p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <!--学习效果-->
+                    <div class="list_head1">
+                        <div class="time_box" ><p>学习效果</p></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="list_content">
+                        <a href="#"><img src="../images/piano-basic-skill-6.jpg" width="520" height="198" /></a>
+                        <dl>
+                            <dt><h2>通过学习，达到的效果</h2></dt>
+                            <dd class="pm_organ">
+                                <p>经过4个月的课程，大部分同学都能够在识谱、手型等方面获得较系统的学习。</p><br/>
+                                <p>具备自学大部分非炫技的流行歌曲、流行钢琴曲并用正确的方式演奏出来的能力。</p><br/>
+                                <p>家里的钢琴终于不是摆设了，也圆了自己从小的钢琴梦。</p>
+                            </dd>
+                        </dl>
+                    </div>
+<!--                    <div class="list_head1">
+                        <div class="time_box" ><p></p></div>
+                        <div class="clear"></div>
+                    </div>-->
+                </div>
+            </div>
         </div>
         <!--学习计划结束-->
     </div>
@@ -134,6 +254,7 @@
 <script type="text/javascript" src="../js/layui/layui.js"></script>
 <script type="text/javascript" src="../js/jquery-lbt/js/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" src="../js/jquery-lbt/js/slider.js"></script>
+<!--<script type="text/javascript" src="../js/jquery-time/js/script.js"></script>-->
 <script type="text/javascript">
     $(function(){
         $('.flexslider').flexslider({
@@ -141,27 +262,21 @@
             direction:"horizontal",
             easing:"swing",
             after:function(slider){
-                switch (slider.currentSlide){
-                    case 0 :
-                            slider.next().children("h1").text("海上钢琴师：用音乐救赎孤独感");
-                            slider.next().children("p").text("《海上钢琴师》的英文片名为《The legend of 1900 》直译就是“1900的传奇”……");
-                        break;
-                    case 1 :
-                        slider.next().children("h1").text("在肖邦心脏前脱帽");
-                        slider.next().children("p").text("从北京飞到波兰，机场的名字就是肖邦机场。在波兰的两天，走在街头，漫步在公园或者小巷深处，听到的或者看到的都是肖邦……");
-                        break;
-                    case 2 :
-                        slider.next().children("h1").text("用膝盖行走的钢琴家");
-                        slider.next().children("p").text("她是一个不幸的女孩，出生于韩国一个不幸的家庭。她的父亲是一个下肢瘫痪的伤残军人，曾经为了止痛服用了10年的吗啡……");
-                        break;
-                    case 3:
-                        slider.next().children("h1").text("钢琴上的黑白左右手");
-                        slider.next().children("p").text("1983年春天，玛格丽特·帕崔克走进“东南老人疗养中心”，开始了她的疗养生活……");
-                        break;
-                    case 4:
-                        slider.next().children("h1").text("会弹钢琴的小狗");
-                        slider.next().children("p").text("主人有一只非常聪明又特别的小狗，因为它和别的小狗不一样，会弹钢琴哦。它的名字叫托利，主人是马戏团的老板……");
-                        break;
+                if(slider.currentSlide == 0){
+                    slider.next().children("h1").text("海上钢琴师：用音乐救赎孤独感");
+                    slider.next().children("p").text("《海上钢琴师》的英文片名为《The legend of 1900 》直译就是“1900的传奇”……");
+                }else if(slider.currentSlide == 1){
+                    slider.next().children("h1").text("在肖邦心脏前脱帽");
+                    slider.next().children("p").text("从北京飞到波兰，机场的名字就是肖邦机场。在波兰的两天，走在街头，漫步在公园或者小巷深处，听到的或者看到的都是肖邦……");
+                }else if(slider.currentSlide == 2){
+                    slider.next().children("h1").text("用膝盖行走的钢琴家");
+                    slider.next().children("p").text("她是一个不幸的女孩，出生于韩国一个不幸的家庭。她的父亲是一个下肢瘫痪的伤残军人，曾经为了止痛服用了10年的吗啡……");
+                }else if(slider.currentSlide == 3){
+                    slider.next().children("h1").text("钢琴上的黑白左右手");
+                    slider.next().children("p").text("1983年春天，玛格丽特·帕崔克走进“东南老人疗养中心”，开始了她的疗养生活……");
+                }else{
+                    slider.next().children("h1").text("会弹钢琴的小狗");
+                    slider.next().children("p").text("主人有一只非常聪明又特别的小狗，因为它和别的小狗不一样，会弹钢琴哦。它的名字叫托利，主人是马戏团的老板……");
                 }
             }
         });
