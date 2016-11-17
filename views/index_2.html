@@ -5,69 +5,6 @@
     <title>山姆钢琴</title>
     <link rel="stylesheet" href="../js/layui/css/layui.css"/>
     <link rel="stylesheet" href="../js/jquery-time/css/style.css"/>
-    <style type="text/css">
-        body{background-color: #f5f8fa;font-family: Microsoft Yahei, "宋体", Arial;}
-        .f_l{float: left}
-        .f_r{float: right}
-        .center_content{width: 1170px;margin: 0px auto;background-color: transparent;}
-        /*-----nav头部开始-------*/
-        .nav{width: 100%;height: 68px;background-color:#393D49;}
-        .nav-container{height: 68px;}
-        .nav-container .logo{display: block;width: 38px;height: 38px;float: left;line-height: 68px;}
-        .nav-container .logo img{width: 38px;height: 38px;border-radius: 16%}
-        .nav-container ul li{line-height: 68px;font-size: 18px; float: left;margin:0px 16px;color: #c2c2c2}
-        .nav-container ul li a{color: #c2c2c2;width: 62px;height: 62px;display: block;text-align: center;}
-        .nav-container ul li a:hover{border-bottom: 2px solid #F7B824;transform: scale(1.1);color:#f5f8fa;}
-        .nav-container .login{float: right;width:140px;height: 100%;line-height: 68px;color: #c2c2c2;font-size: 18px;text-align: center;}
-        .nav-container .login a{font-size: 18px;display: block;width: 52px;height: 52px;color:#c2c2c2;}
-        .nav-container .login a:hover{border-bottom: 2px solid #F7B824;transform: scale(1.1);color:#f5f8fa;}
-        /*-----nav头部结束-------*/
-        /*-----中部开始----------*/
-        .middle{height: auto;}
-        /*----轮播图开始-----*/
-        .flexslider{margin:0px auto;position:relative;height:450px;overflow:hidden;zoom:1;}
-        .flex-viewport{max-height:2000px;-webkit-transition:all 1s ease;-moz-transition:all 1s ease;transition:all 1s ease;}
-        .flexslider .slides{zoom:1;}
-        .flex-direction-nav a{width:60px;height:90px;line-height:99em;overflow:hidden;margin:-60px 0 0;display:block;background:url(../js/jquery-lbt/images/ad_ctr.png) no-repeat;position:absolute;top:50%;z-index:10;cursor:pointer;opacity:0;filter:alpha(opacity=0);-webkit-transition:all .3s ease;}
-        .flex-direction-nav .flex-next{background-position:0 -90px;right:0;}
-        .flex-direction-nav .flex-prev{left:0;}
-        .flexslider:hover .flex-next{opacity:0.8;filter:alpha(opacity=25);}
-        .flexslider:hover .flex-prev{opacity:0.8;filter:alpha(opacity=25);}
-        .flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover{opacity:1;filter:alpha(opacity=50);}
-        .flex-control-nav{width:100%;position:absolute;bottom:10px;text-align:center;}
-        .flex-control-nav li{margin:0 5px;display:inline-block;zoom:1;*display:inline;}
-        .flex-control-paging li a{background:url(../js/jquery-lbt/images/dot.png) no-repeat 0 -16px;display:block;height:16px;overflow:hidden;text-indent:-99em;width:16px;cursor:pointer;}
-        .flex-control-paging li a.flex-active{background-position:0 0;}
-        .content{color: white;position: absolute;top: 40%;bottom:40%;left: 20%;right:20%;text-align: center;}
-        .content h1{font-size: 36px;}
-        .content p{font-size: 20px;}
-        /*----轮播图结束-----*/
-        /*---优秀作业开始-----*/
-        .excellent-homework{height: 200px; margin-top: 10px;}
-        .excellent-homework img{float: left;}
-        .excellent-homework h1{font-size: 22px;float: left;text-align: center;line-height: 42px;margin-left: 10px;font-weight: normal;}
-        .excellent-homework a{display: block;float: right;height: 42px;line-height:54px;}
-        .excellent-homework hr{background-color:#d81e06;}
-        .excellent-homework .homeWork{width: 162px;height: 162px;border-radius: 100%;background-color: #1E9FFF;float: left;margin: 0px 30px;}
-        .excellent-homework .homeWork span{ display:block;padding-top: 10px;text-align: center;color: #888888;font-size: 14px;}
-        .excellent-homework .homeWork:hover{box-shadow: #bfbfbf 3px 3px 3px 3px;}
-        .excellent-homework .homeWork img{widht:60px;height: 60px;margin:50px 50px;vertical-align:middle;cursor: pointer;visibility: hidden;}
-        .excellent-homework .homeWork img:hover{transform: scale(1.1);}
-        /*---优秀作业结束-----*/
-        /*---学习计划开始--------*/
-        .study-plan{height:200px;margin-top: 50px;}
-        .study-plan img{float: left;}
-        .study-plan h1{font-size: 22px;float: left;text-align: center;line-height: 42px;margin-left: 10px;font-weight: normal;}
-        .study-plan a{display: block;float: right;height: 42px;line-height:54px;color:#d81e06;}
-        .study-plan a:active{color:#eeeeee}
-        .study-plan hr{background-color:#d81e06;margin-top: 5px;}
-        .study-plan ul li{line-height: 45px;margin: 0 20px;color:#d81e06;float: left;}
-        /*----基本功开始-----*/
-        .study-plan .basic-skill{width: 100%;height: auto;}
-        /*----基本功结束-----*/
-        /*---学习计划结束--------*/
-        /*-----中部结束----------*/
-    </style>
 </head>
 <body>
     <!--nav头部开始-->
@@ -103,11 +40,11 @@
             <p>《海上钢琴师》的英文片名为《The legend of 1900 》直译就是“1900的传奇”……</p>
         </div>
         <!--轮播图结束-->
-        <!--优秀课程开始-->
-        <div class="excellent-homework center_content middle_publish">
+        <!--优秀作业开始-->
+        <div class="excellent-homework center_content">
             <img src="../images/excellent-homework.png" alt="优秀作业" width="42" height="42"/>
             <h1>优秀作业</h1>
-            <a href="#">更多</a>
+            <a href="./excellent-homework/excellent-homework-more.html">更多</a>
             <hr/>
             <div class="homeWork" style="background: url('../images/excellent-homework-1.jpg')"><img src="../images/play-radio.png" alt=""/><span>小星星变奏曲</span></div>
             <div class="homeWork" style="background: url('../images/excellent-homework-2.jpg') 20px 20px"><img src="../images/play-radio.png" alt=""/><span>夜的钢琴曲5</span></div>
@@ -115,15 +52,39 @@
             <div class="homeWork" style="background: url('../images/excellent-homework-4.jpg') -70px -30px"><img src="../images/play-radio.png" alt=""/><span>卡农</span></div>
             <div class="homeWork" style="background: url('../images/excellent-homework-5.jpg')"><img src="../images/play-radio.png" alt=""/><span>fade</span></div>
         </div>
-        <!--优秀课程结束-->
+        <!--优秀作业结束-->
+
+        <!--Sam风采开始-->
+        <div class="sam-style center_content">
+            <img src="../images/sam-style.png" alt="Sam风采" width="42" height="42"/>
+            <h1>Sam风采</h1>
+            <a href="#">更多</a>
+            <hr/>
+            <div class="courseContent">
+                <img src="../images/course-1.jpg" alt="庖丁解牛系列" width="350" height="230"/>
+                <div class="courseArticle">
+                    <a>庖丁解牛系列</a>
+                </div>
+            </div>
+            <div class="courseContent">
+                <img src="../images/sam-style-1.jpg" alt="土耳其进行曲（爵士版）" width="350" height="230"/>
+                <div class="courseArticle">
+                    <a>土耳其进行曲（爵士版）</a>
+                </div>
+            </div>
+            <div class="courseContent">
+                <img src="../images/sam-style-2.jpg" alt="千本樱" width="350" height="230"/>
+                <div class="courseArticle">
+                    <a>千本樱</a>
+                </div>
+            </div>
+        </div>
+        <!--Sam风采结束-->
+
         <!--学习计划开始-->
         <div class="study-plan center_content">
             <img src="../images/study-plan.png" alt="学习计划" width="42" height="42"/>
             <h1>学习计划</h1>
-<!--            <ul>
-                <li><a href="javascript:void(0)">基本功</a></li>
-                <li><a href="javascript:void(0)">曲谱</a></li>
-            </ul>-->
             <hr/>
             <div class="paimai_list">
                 <div class="paimai_content">
@@ -246,7 +207,7 @@
     </div>
     <!--中部结束-->
     <!--底部开始-->
-    <div class="footer">
+    <div class="footer center_content">
 
     </div>
     <!--底部结束-->

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>优秀作业-更多</title>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css"/>
+    <link rel="stylesheet" href="../../js/jquery-time/css/style.css"/>
+</head>
+<body>
+<!--nav头部开始-->
+<div class="nav">
+    <div class="nav-container center_content">
+        <a href="#" class="logo"><img src="../../images/logo.jpg" alt="山姆钢琴"/></a>
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">拜厄</a></li>
+            <li><a href="#">车尔尼</a></li>
+            <li><a href="#">社区</a></li>
+        </ul>
+        <div class="login">
+            <a href="#" class="f_l">登陆</a><span class="f_l">|</span><a href="#" class="f_l">注册</a>
+        </div>
+    </div>
+</div>
+<!--nav头部结束-->
+<!--优秀作业开始-->
+<div class="layui-tab layui-tab-brief center_content" lay-filter="docDemoTabBrief">
+    <ul class="layui-tab-title">
+        <li class="layui-this">拜厄</li>
+        <li>车尔尼599</li>
+        <li>曲目</li>
+    </ul>
+    <div class="layui-tab-content">
+        <!--拜厄-->
+        <div class="layui-tab-item layui-show">
+            <span class="layui-breadcrumb" lay-separator="|">
+              <a href="javascript:void(0)">第12条</a><a href="javascript:void(0)">第13条</a>
+              <a href="javascript:void(0)">第14条</a><a href="javascript:void(0)">第15条</a>
+              <a href="javascript:void(0)">第16条</a><a href="javascript:void(0)">第17条</a>
+              <a href="javascript:void(0)">第18条</a><a href="javascript:void(0)">第19条</a>
+              <a href="javascript:void(0)">第21条</a><a href="javascript:void(0)">第23条</a>
+              <a href="javascript:void(0)">第24条</a><a href="javascript:void(0)">第26条</a>
+              <a href="javascript:void(0)">第27条</a><a href="javascript:void(0)">第28条</a>
+              <a href="javascript:void(0)">第29条</a><a href="javascript:void(0)">第35条</a>
+              <a href="javascript:void(0)">第38条</a><a href="javascript:void(0)">第40条</a>
+              <a href="javascript:void(0)">第45条</a>
+            </span>
+            <div id="baie-page"></div>
+        </div>
+        <!--车尔尼-->
+        <div class="layui-tab-item">
+            <span class="layui-breadcrumb" lay-separator="|">
+                <a href="javascript:void(0)">第19条</a><a href="javascript:void(0)">第20条</a>
+                <a href="javascript:void(0)">第22条</a><a href="javascript:void(0)">第23条</a>
+                <a href="javascript:void(0)">第24条</a><a href="javascript:void(0)">第26条</a>
+                <a href="javascript:void(0)">第27条</a><a href="javascript:void(0)">第30条</a>
+            </span>
+            <div id="cheerni-page"></div>
+        </div>
+        <!--曲目-->
+        <div class="layui-tab-item">
+            <span class="layui-breadcrumb" lay-separator="|">
+                <a href="javascript:void(0)">虫儿飞</a><a href="javascript:void(0)">摇篮曲</a>
+                <a href="javascript:void(0)">夜曲</a><a href="javascript:void(0)">C大调前奏曲简易版</a>
+                <a href="javascript:void(0)">天空之城C调版</a><a href="javascript:void(0)">Kiss the rain</a>
+                <a href="javascript:void(0)">River Flows In You</a><a href="javascript:void(0)">克罗地亚狂想曲</a>
+                <a href="javascript:void(0)">天空之城原版</a>
+            </span>
+            <div id="music-page"></div>
+        </div>
+    </div>
+</div>
+<!--优秀作业结束-->
+</body>
+<script type="text/javascript" src="../../js/layui/layui.js"></script>
+<script type="text/javascript">
+    layui.use(['laypage', 'layer','element'], function(){
+        var element = layui.element(); //Tab的切换功能，切换事件监听等，需要依赖element模块
+        var laypage = layui.laypage
+        var layer = layui.layer;
+        laypage({
+            cont: 'baie-page'
+            ,pages: 10 //总页数
+            ,groups: 5 //连续显示分页数
+        });
+        laypage({
+            cont: 'cheerni-page'
+            ,pages: 10 //总页数
+            ,groups: 5 //连续显示分页数
+        });
+        laypage({
+            cont: 'music-page'
+            ,pages: 10 //总页数
+            ,groups: 5 //连续显示分页数
+        });
+    });
+</script>
+</html>
